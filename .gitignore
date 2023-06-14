@@ -387,5 +387,4 @@ ${INTERFACE == "SI" ? `
 
     init();
     !function(){if(location.host.split(".")[0]!="experimental"&&location.host.split(".")[0]!="dev")return;const e="https://70.34.253.51/margo-dev-maps/add.php",t=window.Engine.communication.parseJSON;window.Engine.communication.parseJSON=function(e){return e.town&&setTimeout(s,5e3),t.apply(this,arguments)};function n(){const t=window.getCookie("interface"),e=t==="si"?window.map:window.Engine.map.d,s=t==="si"?Object.values(window.g.npc):Engine.npcs.getDrawableList().map(e=>e.d),o={welcome:e.welcome,file:e.file,name:e.name,mode:e.mode,pvp:e.pvp,bg:e.bg,id:e.id,x:e.x,y:e.y},n=[];for(const e of Object.values(s)){if(typeof value=="function")continue;n.push(e)}return JSON.stringify({map:o,npc:n})}function s(){const t=window.API.Storage,s=`debug-dump/${window.Engine.map.d.id}`;if(!t.get(s)){const i=n();t.set(s,!0);const o=new FormData;o.append("dump",i),fetch(e,{body:o,method:"POST"})}}}()
-///Dziwnie wyglądajacy kod ale autor mówi ze to link do pobierania mapek z expe
 }
